@@ -63,7 +63,7 @@ def index():
     if current_user.is_authenticated:
         return {"user": current_user.name, "email":current_user.email}
     else:
-        return redirect("https://localhost:5000/login")
+        return '<a class="button" href="/login">Google Login</a>'
 
 
 @app.route("/login")
